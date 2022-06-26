@@ -2,18 +2,21 @@ import React, { MouseEventHandler } from "react"
 import "./Button.css"
 export interface ButtonProps {
   label?: string;
-  disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
+  disabled?: boolean;
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
   label = "Click Me",
-  disabled = false,
-  onClick = () => null
+  onClick,
+  disabled,
+  className
 }) => {
+  const addedClass = className ? ` ${className}` : ""
   return (
     <button
-      className="hello-default-button"
+      className={`hello-default-button${addedClass}`}
       onClick={onClick}
       disabled={disabled}
     >
