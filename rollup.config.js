@@ -28,7 +28,7 @@ export default [
       resolve(),
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
-      postcss(),
+      postcss({ modules: true }),
       terser()
     ],
   },

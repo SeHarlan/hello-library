@@ -1,4 +1,8 @@
-.hello-default-button {
-  font-size: 60px;
+.helloDefaultButton {
+  font-size: 62px;
   border: 2px dotted var(--library-prime);
+}
+
+.helloDefaultButton:hover {
+  cursor: pointer;
 }
